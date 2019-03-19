@@ -1,6 +1,6 @@
 package LinkList;
 
-class SinglyLinkList {
+class SinglyLinkedList {
 
   private Node head, tail;
 

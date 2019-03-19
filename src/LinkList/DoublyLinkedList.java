@@ -1,6 +1,6 @@
 package LinkList;
 
-public class DoublyLinkList {
+public class DoublyLinkedList {
 
   private Node head, tail = null;
 

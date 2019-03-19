@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DoublyLinkListTest {
+class DoublyLinkedListTest {
   @Test
   void insertNode() {
-    DoublyLinkList list = new DoublyLinkList();
+    DoublyLinkedList list = new DoublyLinkedList();
     assertTrue(list.insertNode(10));
   }
 }
