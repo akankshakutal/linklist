@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SinglyLinkListTest {
-  SinglyLinkList list;
-  Node node;
+  private SinglyLinkList list;
+  private Node node;
 
   @BeforeEach
   void setUp() {
@@ -17,8 +17,9 @@ class SinglyLinkListTest {
   }
 
   @Test
-  void push() {
+  void insertNode() {
     assertTrue(list.insertNode(new Node(10)));
+    assertFalse(list.insertNode(new Node(10)));
   }
 
   @Test
@@ -29,8 +30,8 @@ class SinglyLinkListTest {
 
   @Test
   void insertAfter() {
-    assertTrue(list.insertAfter(node,new Node(150)));
-    assertFalse(list.insertAfter(new Node(10),new Node(150)));
+    assertTrue(list.insertAfter(node, new Node(150)));
+    assertFalse(list.insertAfter(new Node(10), new Node(150)));
   }
 
   @Test
@@ -42,7 +43,7 @@ class SinglyLinkListTest {
   void search() {
     Node node = new Node(10);
     list.insertNode(node);
-    assertEquals(node,list.search(10));
+    assertEquals(node, list.search(10));
 
   }
 }

@@ -9,7 +9,7 @@ class SinglyLinkList {
       head = tail = node;
       return true;
     }
-    if(search(node.getData()) != null)
+    if (search(node.getData()) != null)
       return false;
     tail.setNext(node);
     tail = node;
