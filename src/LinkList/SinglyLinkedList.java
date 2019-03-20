@@ -70,10 +70,23 @@ class SinglyLinkedList<T> {
     return null;
   }
 
+  void traverse() {
+    Node current = head;
+    if (head == null) {
+      System.out.println("List is empty");
+      return;
+    }
+    System.out.println("Nodes of doubly linked list: ");
+    while (current != null) {
+      System.out.println(current.data);
+      current = current.next;
+    }
+  }
 
   private class Node {
     private T data;
     private Node next;
+
     Node(T d) {
       data = d;
       next = null;

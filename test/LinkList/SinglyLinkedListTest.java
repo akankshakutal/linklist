@@ -3,7 +3,8 @@ package LinkList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SinglyLinkedListTest {
   private SinglyLinkedList<Integer> list;
@@ -28,8 +29,8 @@ class SinglyLinkedListTest {
 
   @Test
   void insertAfter() {
-    assertTrue(list.insertAfter(10,20));
-    assertFalse(list.insertAfter(150,30));
+    assertTrue(list.insertAfter(10, 20));
+    assertFalse(list.insertAfter(150, 30));
   }
 
   @Test
@@ -44,6 +45,5 @@ class SinglyLinkedListTest {
     singlyLinkedList.insertNode("Omkar");
     singlyLinkedList.insertNode("Akanksha");
     singlyLinkedList.insertNode("Pratiksha");
-
   }
 }
