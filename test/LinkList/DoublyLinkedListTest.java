@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DoublyLinkedListTest {
-  private DoublyLinkedList list;
+  private DoublyLinkedList<Integer> list;
 
   @BeforeEach
   void setUp() {
-    list = new DoublyLinkedList();
+    list = new DoublyLinkedList<>();
   }
 
   @Test
