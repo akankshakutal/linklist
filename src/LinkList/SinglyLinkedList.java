@@ -1,24 +1,12 @@
 package LinkList;
 
-class SinglyLinkedList <T>{
+class SinglyLinkedList<T> {
 
   private Node head;
   private Node tail;
 
-  private class Node {
-    private T data;
-    private Node next;
-
-    Node(T d) {
-      data = d;
-      next = null;
-    }
-
-  }
-
   boolean insertNode(T value) {
     Node node = new Node(value);
-
     if (head == null) {
       head = tail = node;
       return true;
@@ -51,7 +39,7 @@ class SinglyLinkedList <T>{
   boolean insertAfter(T prevNodeValue, T newNodeValue) {
     Node node = new Node(newNodeValue);
     Node searchResult = search(prevNodeValue);
-    if ( searchResult != null) {
+    if (searchResult != null) {
       node.next = searchResult.next;
       searchResult.next = node;
       return true;
@@ -80,6 +68,16 @@ class SinglyLinkedList <T>{
       current = current.next;
     }
     return null;
+  }
+
+
+  private class Node {
+    private T data;
+    private Node next;
+    Node(T d) {
+      data = d;
+      next = null;
+    }
   }
 
 }
